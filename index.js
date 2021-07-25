@@ -1,9 +1,10 @@
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-// create writeFile function using promises instead of a callback function
-const writeFileAsync = util.promisify(fs.writeFile);
+// TODO: Create an array of questions for user input
+const questions = [];
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -56,7 +57,7 @@ const promptUser = () => {
   ]);
 };
 
-const generateHTML = (answers) =>
+const generateREADME = (answers) =>
 `# ${answers.title}
 
  ## Description
@@ -68,6 +69,8 @@ const generateHTML = (answers) =>
  - [Contribution](#Contribution)
  - [Test](#test)
  - [License](#license)
+ - [GitHub](#github)
+ - [Email](#email)
 
  ## Installation
  ${answers.installation}
@@ -80,14 +83,26 @@ const generateHTML = (answers) =>
 
  ## License
  ${answers.license}
+
+ ## Github
+ https://github.com/${answers.github}
+
+ ## Email
+ ${answers.email}
 `;
 
-// Bonus using writeFileAsync as a promise
-const init = () => {
-  promptUser()
-    .then((answers) => writeFileAsync('README.md', generateHTML(answers)))
+
+// TODO: Create a function to write README file
+const writeToFile = util.promisify(fs.writeFile);
+
+// TODO: Create a function to initialize app
+function init() {
+//const init = () => {
+        promptUser()
+    .then((answers) => writeToFile('README.md', generateREADME(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };
+//};
 
 init();
