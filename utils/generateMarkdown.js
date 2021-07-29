@@ -78,6 +78,10 @@ ${data.usage}
 ## Contribution
 ${data.contribution}
 
+## Test
+The application will be invoked by using the following command:
+${data.test}
+
 ${renderLicenseSection(data.license)}
 ${renderLicenseLink(data.license)}
 
