@@ -41,7 +41,7 @@ const questions =[
     'type': 'list',
     'name': 'license',
     'message': 'How to test the application?',
-    'choices': ["None", "GPL", "GNU", "Mozilla", "IBM"]
+    'choices': ["None", "GNU GPL v3", "The MIT License", "Mozilla Public License 2.0", "IBM Public License Version 1.0"]
   },
   {
     'type': 'input',
@@ -54,6 +54,8 @@ const questions =[
     'message': 'Enter your email address: '
   }
 ];
+
+
 
 const promptUser = () => {
    return inquirer.prompt(questions);

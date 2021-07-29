@@ -1,20 +1,41 @@
+const licenses = {
+  "GNU GPL v3": {
+    badge: "![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)",
+    link: "https://www.gnu.org/licenses/gpl-3.0"
+  },
+  "The MIT License": {
+    badge: "![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)",
+    link: "https://opensource.org/licenses/MIT"
+  },  
+  "Mozilla Public License 2.0": {
+    badge: "![GitHub license](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)",
+    link: "https://opensource.org/licenses/MPL-2.0"
+  },
+  "IBM Public License Version 1.0": {
+    badge: "![GitHub license](https://img.shields.io/badge/License-IPL%201.0-blue.svg)",
+    link: "https://opensource.org/licenses/IPL-1.0"
+  }  
+};
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let message = '';
-    if (license !== 'None') {
-    message = `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  if (license !== 'None') {
+    message = licenses[license].badge;
+    return message;
+  } else {
     return message;
   }
-  return '';
 }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let message = '';
   if (license !== 'None') {
-    message = `https://img.shields.io/badge/license-${license}-blue.svg`;
+    message = licenses[license].link;
     return message;
   }
   return message;
