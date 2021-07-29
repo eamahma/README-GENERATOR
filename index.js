@@ -4,6 +4,7 @@ const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
 // Array of classes for each question
 const questions =[
   {
@@ -40,7 +41,7 @@ const questions =[
     'type': 'list',
     'name': 'license',
     'message': 'How to test the application?',
-    'choices': ["A", "B", "C", "D"]
+    'choices': ["None", "GPL", "GNU", "Mozilla", "IBM"]
   },
   {
     'type': 'input',
