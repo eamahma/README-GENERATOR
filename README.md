@@ -33,5 +33,5 @@ https://opensource.org/licenses/MPL-2.0
 [Video of README.md in action](https://drive.google.com/file/d/1si6WfXYJNvJVC9FCzX9T_t8g0iTupqIR/view)
 
 ## Questions
-You can check my work on GitHub https://github.com/eamahma/README-GENERATOR or can reach me by email eamahma@gmail.com
+You can check my work on [GitHub](https://github.com/eamahma/README-GENERATOR) or can reach me by [email](mailto:eamahma@gmail.com)
 

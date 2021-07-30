@@ -89,7 +89,7 @@ ${renderLicenseLink(data.license)}
 [Video of README.md in action](https://drive.google.com/file/d/1rsuAMGVkiJ6gU7OlODPs4eVE1U7gBSEv/view)
 
 ## Questions
-You can check my work on GitHub https://github.com/${data.github} or can reach me by email ${data.email}
+You can check my work on [GitHub](https://github.com/${data.github}) or can reach me by [email](${data.email})
 
 `;
 }
